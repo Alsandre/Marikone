@@ -1,1 +1,0 @@
-export const socBtnStyles = 'hover:bg-accent-200 hover:rounded';

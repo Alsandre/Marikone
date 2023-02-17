@@ -1,7 +1,5 @@
 import React from "react";
 import { EmailIcon, FacebookIcon, InstagramIcon, Logo } from "../icons";
-import { SOCIAL_LINK } from "../constants/constants";
-import {socBtnStyles} from '../styles/socialButton';
 
 export const Header = () => {
   return (
@@ -13,8 +11,8 @@ export const Header = () => {
       </div>
 
       <div className="flex-initial flex-row flex justify-around w-40 invisible md:visible self-center">
-        <a href={SOCIAL_LINK.instagram} target='_blank' className={socBtnStyles}><InstagramIcon /></a>
-        <a href={SOCIAL_LINK.facebook} target='_blank' className={socBtnStyles}><FacebookIcon /></a>
+        <InstagramIcon />
+        <FacebookIcon />
         <EmailIcon />
       </div>
     </div>
