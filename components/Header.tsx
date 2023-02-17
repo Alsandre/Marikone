@@ -12,8 +12,8 @@ export const Header = () => {
       </div>
 
       <div className="flex-initial flex-row flex justify-around w-40 invisible md:visible self-center">
-        <a href={SOCIAL_LINK.instagram} target='_blank' rel="noopener"><InstagramIcon /></a>
-        <a href={SOCIAL_LINK.facebook} target='_blank' rel="noopener"><FacebookIcon /></a>
+        <a href={SOCIAL_LINK.instagram} target='_blank'><InstagramIcon /></a>
+        <a href={SOCIAL_LINK.facebook} target='_blank'><FacebookIcon /></a>
         <EmailIcon />
       </div>
     </div>
