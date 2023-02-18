@@ -40,7 +40,7 @@ export const ContactSection = () => {
       <h1 className="text-dark-200 text-2xl italic font-extralight">Contact</h1>
 
       <div className="bg-section md:w-fit w-screen rounded-lg mt-12 flex md:flex-row flex-col-reverse py-12 md:px-14">
-        <div className="flex md:border-r bg-section md:bg-transparent border-dark-100 border-opacity-10 flex-col md:pr-12 md:items-start mx-24 mt-24 md:mt-0 w-screen md:w-fit">
+        <div className="flex md:border-r bg-section md:bg-transparent border-dark-100 border-opacity-10 flex-col md:pr-12 md:items-start mx-24 mt-24 md:mt-0 md:w-fit">
           <StoreInfo
             title="Geo Fashion Lab"
             address="80 Zakaria Paliashvili St, Tbilisi"
