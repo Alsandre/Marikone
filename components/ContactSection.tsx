@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ContactSectionIcon } from "../icons";
 import { StoreInfo } from "./StoreInfo";
 import { TextInput } from "./TextInput";
+import { TickIcon } from "../icons";
 
 const URL =
   "https://script.google.com/macros/s/AKfycbyWA81iY-k9_UAx78vEvaMEwJEtXcpJuiqr1lh3RmvRHauPZjP7XXpl7ReJPkMT5Ujo1w/exec";
@@ -32,6 +33,11 @@ export const ContactSection = () => {
       setName("");
       setEmail("");
       setMessage("");
+      let successMsg = document.getElementById('messege-sent');
+      successMsg?.classList.remove('hidden');
+      setTimeout(()=>{
+        successMsg?.classList.add('hidden');
+      }, 3000)
     }
   }
 
@@ -74,13 +80,18 @@ export const ContactSection = () => {
             onChange={(e: any) => setMessage(e.target.value)}
             value={message}
           />
-
-          <button
-            className="w-32 h-12 bg-accent-200 rounded md:self-start self-center"
-            onClick={sendEmail}
-          >
-            <h1 className="text-dark-200 text-lg">Submit</h1>
-          </button>
+          <div className="md:self-start self-center">
+            <button
+              className="w-32 h-12 bg-accent-200 rounded"
+              onClick={sendEmail}
+            >
+              <h1 className="text-dark-200 text-lg">Submit</h1>
+            </button>
+            <span id="messege-sent" className="absolute text-sm ml-4  hidden">
+              <TickIcon/>
+              <p className="ml-6 mt-4 text-sent">Message sent</p>
+            </span>
+          </div>
         </div>
       </div>
     </div>
