@@ -10,8 +10,8 @@ export const HeroSection = () => {
         </h1>
       </div>
 
-      <div className="mt-16 flex flex-row">
-        <div className="flex-col mx-1">
+      <div className="mt-16 flex flex-row justify-center">
+        <div className="flex-col px-1  md:w-1/4">
           <div className=" mb-3">
             <Image
               src="/assets/hero1.png"
@@ -41,7 +41,7 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="flex-col mx-3">
+        <div className="flex-col px-3 md:w-1/4">
           <div className=" mb-3">
             <Image
               src="/assets/hero4.png"
@@ -71,7 +71,7 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="flex-col mx-1">
+        <div className="flex-col px-1 md:w-1/4">
           <div className=" mb-3">
             <Image
               src="/assets/hero7.png"
