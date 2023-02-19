@@ -7,7 +7,7 @@ export const StyleSection = () => {
     <div className="w-screen mb-32 flex flex-col items-center">
       <h1 className="text-dark-200 text-2xl italic font-extralight">Style</h1>
 
-      <div className="mt-16 flex md:flex-row flex-col md:-mx-2">
+      <div className="mt-8 flex md:flex-row flex-col md:-mx-2">
         <div className="md:flex-col flex-row mx-2 md:px-0 px-2">
           <div className=" mb-4">
             <Image

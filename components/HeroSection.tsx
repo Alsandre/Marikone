@@ -10,7 +10,7 @@ export const HeroSection = () => {
         </h1>
       </div>
 
-      <div className="mt-16 flex flex-row">
+      <div className="mt-8 flex flex-row">
         <div className="flex-col mx-1">
           <div className=" mb-3">
             <Image
