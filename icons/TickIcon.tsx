@@ -13,9 +13,9 @@ export const TickIcon = () => {
         <path
           d="M1 6.14286L4.75 10L11 1"
           stroke="#10B981"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </span>
