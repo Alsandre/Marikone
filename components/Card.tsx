@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-export const Card = ({ title, summary, image, width }: Record<string, string>) => {
+export const Card = ({ title, summary, image, className }: Record<string, string>) => {
   return (
     <>
-      <div className={`flex w-screen ${width}`}>
+      <div className={`flex w-screen ${className}`}>
         <div className="flex my-10 md:mx-1 mx-20 flex-col items-center">
           <Image
             src={`/assets/${image}.png`}
