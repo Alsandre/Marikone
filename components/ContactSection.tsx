@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ContactSectionIcon } from "../icons";
 import { StoreInfo } from "./StoreInfo";
 import { TextInput } from "./TextInput";
+import { Text } from "./Text";
 
 const URL =
   "https://script.google.com/macros/s/AKfycbyWA81iY-k9_UAx78vEvaMEwJEtXcpJuiqr1lh3RmvRHauPZjP7XXpl7ReJPkMT5Ujo1w/exec";
@@ -37,7 +38,7 @@ export const ContactSection = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-dark-200 text-2xl italic font-extralight">Contact</h1>
+      <Text variant='h1' styles='text-dark-200 text-2xl italic font-extralight' value='Contact' />
 
       <div className="bg-section md:w-fit w-screen rounded-lg mt-12 flex md:flex-row flex-col-reverse py-12 md:px-14">
         <div className="flex md:border-r bg-section md:bg-transparent border-dark-100 border-opacity-10 flex-col md:pr-12 md:items-start mx-24 mt-24 md:mt-0 md:w-fit">
@@ -79,7 +80,7 @@ export const ContactSection = () => {
             className="w-32 h-12 bg-accent-200 rounded md:self-start self-center"
             onClick={sendEmail}
           >
-            <h1 className="text-dark-200 text-lg">Submit</h1>
+            <Text variant='h1' styles='text-dark-200 text-lg' value='Submit' />
           </button>
         </div>
       </div>

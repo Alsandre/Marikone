@@ -1,11 +1,12 @@
 import React from "react";
 import { StyleSectionIcon } from "../icons";
 import Image from "next/image";
+import { Text } from "./Text";
 
 export const StyleSection = () => {
   return (
     <div className="w-screen mb-32 flex flex-col items-center">
-      <h1 className="text-dark-200 text-2xl italic font-extralight">Style</h1>
+      <Text varian='h1' styles='text-dark-200 text-2xl italic font-extralight' value='Style' />
 
       <div className="mt-16 flex md:flex-row flex-col md:-mx-2">
         <div className="md:flex-col flex-row mx-2 md:px-0 px-2">

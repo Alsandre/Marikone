@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Text } from "./Text";
 
 export const Card = ({ title, summary, image }: Record<string, string>) => {
   return (
@@ -15,8 +16,8 @@ export const Card = ({ title, summary, image }: Record<string, string>) => {
           />
 
           <div className=" text-dark-200 mt-4 max-w-[400px]">
-            <h1 className="font-medium">{title}</h1>
-            <h1 className="font-extralight mt-4">{summary}</h1>
+            <Text variant='h1' styles='font-medium' value={title} />
+            <Text styles='font-extralight mt-4' value={summary} />
           </div>
         </div>
       </div>
