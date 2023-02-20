@@ -9,3 +9,4 @@ export * from "./ContactSection";
 export * from "./StoreInfo";
 export * from "./TextInput";
 export * from "./Card";
+export * from "./Text";
