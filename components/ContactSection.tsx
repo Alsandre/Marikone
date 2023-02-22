@@ -80,14 +80,14 @@ export const ContactSection = () => {
             onChange={(e: any) => setMessage(e.target.value)}
             value={message}
           />
-          <div className="md:self-start self-center">
+          <div className="md:self-start self-center w-screen md:w-auto flex flex-col md:block">
             <button
-              className="w-32 h-12 bg-accent-200 rounded"
+              className="w-32 h-12 bg-accent-200 rounded m-auto"
               onClick={sendEmail}
             >
               <h1 className="text-dark-200 text-lg">Submit</h1>
             </button>
-            <span id="messege-sent" className="absolute text-sm ml-4  hidden">
+            <span id="messege-sent" className="text-sm m-auto md:absolute md:ml-4">
               <TickIcon/>
               <p className="ml-6 mt-4 text-sent">Message sent</p>
             </span>
