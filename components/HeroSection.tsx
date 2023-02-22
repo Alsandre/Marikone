@@ -6,7 +6,7 @@ export const HeroSection = () => {
   return (
     <div className="min-h-screen flex justify-start pt-4 md:pb-32 pb-24 flex-col items-center">
       <div className="">
-        <Text variant='h1' styles="text-dark-200 text-2xl italic font-extralight" value='Fashion Designer' />
+        <Text variant='title' className="text-dark-200 text-2xl italic font-extralight">Fashion Designer</Text>
       </div>
 
       <div className="mt-16 flex flex-row">
