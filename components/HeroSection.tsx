@@ -1,81 +1,54 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import Image from "next/image";
 
-export const HeroSection = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  let [loadCount, setLoadCount] = useState(0);
-  useEffect(() => {
-    setIsMobile(screen.width<768);
-  }, [])
+const imageArray: string[][] = [
+  ["hero3", "hero5", "hero7"],
+  ["hero1", "hero4", "hero8"],
+  ["hero2", "hero6", "hero9"],
+];
+// const loadReducer = (prevState: any, action:any) => {
 
-  console.log(isMobile)
-  let mobile = <button>Load More</button>;
-  let load1 = (
-    <div className="flex-col md:mx-3 mx-1">
-      <div className=" mb-3">
-        <Image
-          src="/assets/hero4.png"
-          width={390}
-          height={507}
-          alt="4"
-          quality={30}
-        />
-      </div>
-      <div className=" mb-3">
-        <Image
-          src="/assets/hero5.png"
-          width={390}
-          height={507}
-          alt="5"
-          quality={30}
-        />
-      </div>
-      <div className="mb-3">
-        <Image
-          src="/assets/hero6.png"
-          width={390}
-          height={507}
-          alt="6"
-          quality={30}
-        />
-      </div>
-    </div>
-  );
-  let load2 = (
-    <div className="flex-col mx-1">
-      <div className=" mb-3">
-        <Image
-          src="/assets/hero7.png"
-          width={390}
-          height={507}
-          alt="7"
-          quality={30}
-        />
-      </div>
-      <div className=" mb-3">
-        <Image
-          src="/assets/hero8.png"
-          width={390}
-          height={507}
-          alt="8"
-          quality={30}
-        />
-      </div>
-      <div className="mb-4">
-        <Image
-          src="/assets/hero9.png"
-          width={390}
-          height={507}
-          alt="9"
-          quality={30}
-        />
-      </div>
-    </div>
-  );
-    const loadHandler = () => {
-      setLoadCount(++loadCount);
-      console.log(loadCount)
-    };
+//   return prevState
+// };
+const initialState = {
+  renderState: imageArray[0],
+  loadCount: 0,
+  buttonState: { buttonStatus: false, buttonText: "Load More" },
+};
+export const HeroSection = () => {
+  // const [state, dispatchAction] = useReducer(loadReducer, {renderState: imageArray[0], loadCount: 0} )
+  const [state, setState] = useState(initialState);
+  const [isMobile, setIsMobile] = useState(false);
+  // const [loadCount, setLoadCount] = useState(0);
+  useEffect(() => {
+    setIsMobile(screen.width < 768);
+  }, []);
+
+  const loadHandler = () => {
+    // setLoadCount((prevState) => {
+    //   console.log(prevState);
+    //   return prevState + 1;
+    // });
+    setState((prevState) => {
+      const newLoadCount = prevState.loadCount + 1;
+      if (imageArray[newLoadCount]) {
+        const newRenderState = [
+          ...prevState.renderState,
+          ...imageArray[newLoadCount],
+        ];
+
+        return {
+          renderState: newRenderState,
+          loadCount: newLoadCount,
+          buttonState: prevState.buttonState,
+        };
+      } else
+        return {
+          ...prevState,
+          buttonState: { buttonStatus: true, buttonText: "Nothing to Load" },
+        };
+    });
+  };
 
   return (
     <div className="min-h-screen flex justify-start pt-4 md:pb-32 pb-24 flex-col items-center">
@@ -87,37 +60,25 @@ export const HeroSection = () => {
 
       <div className="md:mt-8 mt-6 flex flex-col md:flex-row">
         <div className="flex-col mx-1">
-          <div className=" mb-3">
-            <Image
-              src="/assets/hero1.png"
-              width={390}
-              height={507}
-              alt="1"
-              quality={30}
-            />
-          </div>
-          <div className=" mb-3">
-            <Image
-              src="/assets/hero2.png"
-              width={390}
-              height={507}
-              alt="2"
-              quality={30}
-            />
-          </div>
-          <div className="mb-3">
-            <Image
-              src="/assets/hero3.png"
-              width={390}
-              height={507}
-              alt="3"
-              quality={30}
-            />
-          </div>
+          {state.renderState.map((el) => (
+            <div className="mb-3" key={el}>
+              <Image
+                src={`/assets/${el}.png`}
+                width={390}
+                height={507}
+                alt="3"
+                quality={30}
+              />
+            </div>
+          ))}
         </div>
-      {isMobile && loadCount > 0 && load1}
-      {isMobile && loadCount > 1 && load2}
-      {isMobile && <button onClick={loadHandler}>Load More</button>}
+        <button
+          onClick={loadHandler}
+          disabled={state.buttonState.buttonStatus}
+          className="w-32 h-12 bg-accent-200 rounded self-center my-3 mx-8"
+        >
+          {state.buttonState.buttonText}
+        </button>
       </div>
     </div>
   );
