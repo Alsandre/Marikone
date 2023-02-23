@@ -14,7 +14,7 @@ export const Card = ({ title, summary, image, className }: Record<string, string
             quality={30}
           />
 
-          <div className=" text-dark-200 mt-4 w-[350px]">
+          <div className=" text-dark-200 mt-4 max-w-[350px]">
             <h1 className="font-medium">{title}</h1>
             <h1 className="font-extralight mt-4">{summary}</h1>
           </div>
