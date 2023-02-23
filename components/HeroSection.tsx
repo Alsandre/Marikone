@@ -1,7 +1,77 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import Image from "next/image";
 
 export const HeroSection = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    setIsMobile(screen.width<768);
+  }, [])
+
+  console.log(isMobile)
+  let mobile = <button>Load More</button>;
+  let load1 = (
+    <div className="flex-col md:mx-3 mx-1">
+      <div className=" mb-3">
+        <Image
+          src="/assets/hero4.png"
+          width={390}
+          height={507}
+          alt="4"
+          quality={30}
+        />
+      </div>
+      <div className=" mb-3">
+        <Image
+          src="/assets/hero5.png"
+          width={390}
+          height={507}
+          alt="5"
+          quality={30}
+        />
+      </div>
+      <div className="mb-3">
+        <Image
+          src="/assets/hero6.png"
+          width={390}
+          height={507}
+          alt="6"
+          quality={30}
+        />
+      </div>
+    </div>
+  );
+  let load2 = (
+    <div className="flex-col mx-1">
+      <div className=" mb-3">
+        <Image
+          src="/assets/hero7.png"
+          width={390}
+          height={507}
+          alt="7"
+          quality={30}
+        />
+      </div>
+      <div className=" mb-3">
+        <Image
+          src="/assets/hero8.png"
+          width={390}
+          height={507}
+          alt="8"
+          quality={30}
+        />
+      </div>
+      <div className="mb-4">
+        <Image
+          src="/assets/hero9.png"
+          width={390}
+          height={507}
+          alt="9"
+          quality={30}
+        />
+      </div>
+    </div>
+  );
+
   return (
     <div className="min-h-screen flex justify-start pt-4 md:pb-32 pb-24 flex-col items-center">
       <div className="">
@@ -10,7 +80,7 @@ export const HeroSection = () => {
         </h1>
       </div>
 
-      <div className="md:mt-8 mt-6 flex flex-row">
+      <div className="md:mt-8 mt-6 flex flex-col md:flex-row">
         <div className="flex-col mx-1">
           <div className=" mb-3">
             <Image
@@ -40,66 +110,8 @@ export const HeroSection = () => {
             />
           </div>
         </div>
-
-        <div className="flex-col mx-3">
-          <div className=" mb-3">
-            <Image
-              src="/assets/hero4.png"
-              width={390}
-              height={507}
-              alt="4"
-              quality={30}
-            />
-          </div>
-          <div className=" mb-3">
-            <Image
-              src="/assets/hero5.png"
-              width={390}
-              height={507}
-              alt="5"
-              quality={30}
-            />
-          </div>
-          <div className="mb-3">
-            <Image
-              src="/assets/hero6.png"
-              width={390}
-              height={507}
-              alt="6"
-              quality={30}
-            />
-          </div>
-        </div>
-
-        <div className="flex-col mx-1">
-          <div className=" mb-3">
-            <Image
-              src="/assets/hero7.png"
-              width={390}
-              height={507}
-              alt="7"
-              quality={30}
-            />
-          </div>
-          <div className=" mb-3">
-            <Image
-              src="/assets/hero8.png"
-              width={390}
-              height={507}
-              alt="8"
-              quality={30}
-            />
-          </div>
-          <div className="mb-4">
-            <Image
-              src="/assets/hero9.png"
-              width={390}
-              height={507}
-              alt="9"
-              quality={30}
-            />
-          </div>
-        </div>
+      {!isMobile && load1}
+      {!isMobile && load2}
       </div>
     </div>
   );
