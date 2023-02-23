@@ -38,7 +38,7 @@ export const ContactSection = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <Text variant='h1' styles='text-dark-200 text-2xl italic font-extralight' value='Contact' />
+      <Text variant='title' className='text-dark-200 text-2xl italic font-extralight'>Contact</Text>
 
       <div className="bg-section md:w-fit w-screen rounded-lg mt-12 flex md:flex-row flex-col-reverse py-12 md:px-14">
         <div className="flex md:border-r bg-section md:bg-transparent border-dark-100 border-opacity-10 flex-col md:pr-12 md:items-start mx-24 mt-24 md:mt-0 md:w-fit">
@@ -80,7 +80,7 @@ export const ContactSection = () => {
             className="w-32 h-12 bg-accent-200 rounded md:self-start self-center"
             onClick={sendEmail}
           >
-            <Text variant='h1' styles='text-dark-200 text-lg' value='Submit' />
+            <Text variant='label' className='text-dark-200 text-lg'>Submit</Text>
           </button>
         </div>
       </div>

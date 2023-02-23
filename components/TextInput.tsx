@@ -27,11 +27,9 @@ export const TextInput = ({
     <>
       <div className={className}>
         <div className="ml-4 px-2 absolute -mt-4">
-          <Text
-            variant="h1"
-            styles="bg-section px-2 text-dark-100"
-            value={label}
-          />
+          <Text variant="body" className="bg-section px-2 text-dark-100">
+            {label}
+          </Text>
         </div>
 
         {variant === "input" ? (

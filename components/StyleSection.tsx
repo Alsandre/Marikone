@@ -6,7 +6,7 @@ import { Text } from "./Text";
 export const StyleSection = () => {
   return (
     <div className="w-screen mb-32 flex flex-col items-center">
-      <Text varian='h1' styles='text-dark-200 text-2xl italic font-extralight' value='Style' />
+      <Text variant='title' className='text-dark-200 text-2xl italic font-extralight'>Style</Text>
 
       <div className="mt-16 flex md:flex-row flex-col md:-mx-2">
         <div className="md:flex-col flex-row mx-2 md:px-0 px-2">

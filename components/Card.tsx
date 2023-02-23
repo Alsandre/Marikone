@@ -16,8 +16,8 @@ export const Card = ({ title, summary, image }: Record<string, string>) => {
           />
 
           <div className=" text-dark-200 mt-4 max-w-[400px]">
-            <Text variant='h1' styles='font-medium' value={title} />
-            <Text styles='font-extralight mt-4' value={summary} />
+            <Text variant='title' className='font-medium'>{title}</Text>
+            <Text className='font-extralight mt-4'>{summary}</Text>
           </div>
         </div>
       </div>

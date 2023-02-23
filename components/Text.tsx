@@ -4,7 +4,7 @@ import React from "react";
 type TTypography = "title" | "subtitle" | "label" | "body";
 
 type TText = {
-  variant: TTypography;
+  variant?: TTypography;
   children: React.ReactNode;
   className?: string;
 };
