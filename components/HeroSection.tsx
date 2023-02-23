@@ -3,6 +3,7 @@ import Image from "next/image";
 
 export const HeroSection = () => {
   const [isMobile, setIsMobile] = useState(false);
+  let [loadCount, setLoadCount] = useState(0);
   useEffect(() => {
     setIsMobile(screen.width<768);
   }, [])
@@ -71,6 +72,10 @@ export const HeroSection = () => {
       </div>
     </div>
   );
+    const loadHandler = () => {
+      setLoadCount(++loadCount);
+      console.log(loadCount)
+    };
 
   return (
     <div className="min-h-screen flex justify-start pt-4 md:pb-32 pb-24 flex-col items-center">
@@ -110,8 +115,9 @@ export const HeroSection = () => {
             />
           </div>
         </div>
-      {!isMobile && load1}
-      {!isMobile && load2}
+      {isMobile && loadCount > 0 && load1}
+      {isMobile && loadCount > 1 && load2}
+      {isMobile && <button onClick={loadHandler}>Load More</button>}
       </div>
     </div>
   );
