@@ -4,7 +4,7 @@ import { Card } from "./Card";
 
 export const PopularSection = () => {
   return (
-    <div className="w-screen mb-32 flex flex-col items-center">
+    <div className=" mb-32 flex flex-col items-center">
       <h1 className="text-dark-200 text-2xl italic font-extralight">Popular</h1>
 
       <div className="flex flex-col md:flex-row justify-center">
@@ -16,7 +16,7 @@ export const PopularSection = () => {
         />
         
         <Card
-          className='md:w-2/6'
+          className='md:w-2/6 mx-[72px]'
           title="Leather Corset"
           image="corset-leather"
           summary="Made with high-quality genuine leather, classic Black Leather Corset for all types of outfits."
