@@ -8,6 +8,9 @@
 >Next.js<br>
 >Tailwind
 
+### Package manager
+>Yarn
+
 _Please, checkout website at following link: [marikone.com](https://marikone.com)_
 
 _To run on local server:_
