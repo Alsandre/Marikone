@@ -1,16 +1,14 @@
 # MARIKONE.COM
 
 ### Technologies used: 
->Typescript
-
->Javascript;
+>Typescript <br>
+>Javascript
 
 ### Frameworks:
->Next.js
-
+>Next.js<br>
 >Tailwind
 
-Please, checkout website at following link: _[marikone.com](https://marikone.com)_
+_Please, checkout website at following link: [marikone.com](https://marikone.com)_
 
 _To run on local server:_
 1. Open **terminal** (<kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>`</kbd> or terminal>new terminal)
