@@ -1,12 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import { StyleSectionIcon } from "../icons";
 import Image from "next/image";
-import { PlatformContext } from "../platform-context";
 import { ImageLoader } from "./ImageLoader";
 import { IMAGE_PATH_LIST_MOBILE } from "../constants"; 
+import {usePlatform} from '../hooks/usePlatform';
 
-export const StyleSection = () => {
-  const isMobile = useContext(PlatformContext);
+
+export const TrendSection = () => {
+  const isMobile = usePlatform();
   return (<>
     {!isMobile && <div className="w-screen mb-32 flex flex-col items-center">
       <h1 className="text-dark-200 text-2xl italic font-extralight">Style</h1>

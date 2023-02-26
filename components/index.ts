@@ -4,7 +4,7 @@ export * from "./Screen";
 export * from "./HeroSection";
 export * from "./AboutSection";
 export * from "./PopularSection";
-export * from "./StyleSection";
+export * from "./TrendSection";
 export * from "./ContactSection";
 export * from "./StoreInfo";
 export * from "./TextInput";

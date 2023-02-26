@@ -2,12 +2,11 @@ import React, {useContext} from "react";
 import Image from "next/image";
 import { ImageLoader } from "./ImageLoader";
 import { IMAGE_PATH_LIST_MOBILE } from "../constants";
-import {PlatformContext} from '../platform-context.js'
-
+import { usePlatform } from "../hooks/usePlatform";
 
 
 export const HeroSection = () => {
-  const isMobile = useContext(PlatformContext);
+  const isMobile = usePlatform();
   return <>
     {!isMobile && <div className="min-h-screen flex justify-start pt-4 md:pb-32 pb-24 flex-col items-center">
       <div className="">
