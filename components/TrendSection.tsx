@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSectionIcon } from "../icons";
 import Image from "next/image";
 import { ImageLoader } from "./ImageLoader";
-import { IMAGE_PATH_LIST_MOBILE } from "../constants"; 
+import { TREND_SECTION_IMAGES } from "../constants"; 
 import {usePlatform} from '../hooks/usePlatform';
 
 
@@ -98,7 +98,7 @@ export const TrendSection = () => {
         </div>
       </div>
     </div>}
-    {isMobile && <ImageLoader title="Style" imagePathList={IMAGE_PATH_LIST_MOBILE.styleSection} imagePerLoad={4} />}
+    {isMobile && <ImageLoader title="Style" imagePathList={TREND_SECTION_IMAGES} imagePerLoad={4} />}
     </>
   );
 };

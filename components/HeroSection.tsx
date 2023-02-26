@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import Image from "next/image";
 import { ImageLoader } from "./ImageLoader";
-import { IMAGE_PATH_LIST_MOBILE } from "../constants";
+import { HERO_SECTION_IMAGES } from "../constants";
 import { usePlatform } from "../hooks/usePlatform";
 
 
@@ -108,6 +108,6 @@ export const HeroSection = () => {
       </div>
     </div> }
 
-    {isMobile && <ImageLoader title='Fashion Designer' imagePathList={IMAGE_PATH_LIST_MOBILE.heroSection} imagePerLoad={3} />}
+    {isMobile && <ImageLoader title='Fashion Designer' imagePathList={HERO_SECTION_IMAGES} imagePerLoad={3} />}
   </>
 };
