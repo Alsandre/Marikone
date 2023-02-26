@@ -80,7 +80,7 @@ export const ContactSection = () => {
             className="w-32 h-12 bg-accent-200 rounded md:self-start self-center"
             onClick={sendEmail}
           >
-            <Text variant='label' className='text-dark-200 text-lg'>Submit</Text>
+            <Text variant='label' className='text-dark-200'>Submit</Text>
           </button>
         </div>
       </div>
