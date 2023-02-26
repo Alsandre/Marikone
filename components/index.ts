@@ -10,4 +10,3 @@ export * from "./StoreInfo";
 export * from "./TextInput";
 export * from "./Card";
 export * from "./ImageLoader";
-export * from './HeroSectionMobile';

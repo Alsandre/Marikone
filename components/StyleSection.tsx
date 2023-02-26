@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { StyleSectionIcon } from "../icons";
 import Image from "next/image";
+import { PlatformContext } from "../platform-context";
+import { ImageLoader } from "./ImageLoader";
+import { IMAGE_PATH_LIST_MOBILE } from "../constants"; 
 
 export const StyleSection = () => {
-  return (
-    <div className="w-screen mb-32 flex flex-col items-center">
+  const isMobile = useContext(PlatformContext);
+  return (<>
+    {!isMobile && <div className="w-screen mb-32 flex flex-col items-center">
       <h1 className="text-dark-200 text-2xl italic font-extralight">Style</h1>
 
       <div className="md:mt-8 mt-5 flex md:flex-row flex-col md:-mx-2">
@@ -92,6 +96,8 @@ export const StyleSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div>}
+    {isMobile && <ImageLoader title="Style" imagePathList={IMAGE_PATH_LIST_MOBILE.styleSection} imagePerLoad={4} />}
+    </>
   );
 };
