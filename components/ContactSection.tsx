@@ -76,7 +76,7 @@ export const ContactSection = () => {
           />
 
           <button
-            className="w-32 h-12 bg-accent-200 rounded md:self-start self-center hover:bg-accent-100"
+            className="w-32 h-12 bg-accent-200 rounded md:self-start self-center "
             onClick={sendEmail}
           >
             <h1 className="text-dark-200 text-lg">Submit</h1>
