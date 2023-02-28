@@ -8,3 +8,4 @@ export * from "./StyleSectionIcon";
 export * from "./ContactSectionIcon";
 export * from "./LocationIcon";
 export * from "./PhoneIcon";
+export * from "./TickIcon";
