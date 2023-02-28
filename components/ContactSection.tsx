@@ -82,12 +82,12 @@ export const ContactSection = () => {
           />
           <div className="md:self-start self-center w-screen md:w-auto flex flex-col md:block">
             <button
-              className="w-32 h-12 bg-accent-200 rounded m-auto"
+              className="w-32 h-12 bg-accent-200 rounded m-auto hover:bg-accent-100"
               onClick={sendEmail}
             >
               <h1 className="text-dark-200 text-lg">Submit</h1>
             </button>
-            <span id="messege-sent" className="text-sm m-auto md:absolute md:ml-4">
+            <span id="messege-sent" className="text-sm m-auto md:absolute md:ml-4 hidden">
               <TickIcon/>
               <p className="ml-6 mt-4 text-sent">Message sent</p>
             </span>
