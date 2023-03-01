@@ -2,7 +2,6 @@ import React, {useState} from "react";
 
 import Image from "next/image";
 
-//imageList = ['/assets/hero1', '/assets/hero2', '/assets/hero3', '/assets/hero4', '/assets/hero5', '/assets/hero6']
 type TImageLoaderProps = {
     title: string;
     imagePathList: string[];
