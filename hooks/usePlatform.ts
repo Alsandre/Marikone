@@ -1,17 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export const usePlatform = (): boolean => {
+export const usePlatform = function (): boolean {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
-    let width = window.screen.width
-    onresize = () => width = window.screen.width
-      if (width < 768) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    
-      console.log(isMobile);
+    window.screen.width < 768 ? setIsMobile(true) : setIsMobile(false);
   }, []);
   return isMobile;
 };

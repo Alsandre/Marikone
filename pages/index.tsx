@@ -4,7 +4,7 @@ import {
   HeroSection,
   PopularSection,
   Screen,
-  StyleSection,
+  TrendSection,
 } from "../components";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <PopularSection />
-      <StyleSection />
+      <TrendSection />
       <ContactSection />
     </Screen>
   );
