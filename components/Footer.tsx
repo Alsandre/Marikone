@@ -1,6 +1,7 @@
 import React from "react";
 import { SOCIAL_LINK } from "../constants";
 import { EmailIcon, FacebookIcon, InstagramIcon, Logo } from "../icons";
+import { Text } from "./Text";
 
 export const Footer = () => {
   return (
@@ -12,9 +13,7 @@ export const Footer = () => {
         <a href="#contact-form"><EmailIcon /></a>
       </div>
       <div className="flex-initial flex justify-around self-center">
-        <h1 className="text-sm text-end font-extralight text-dark-200">
-          2023 All rights reserved © MARIKONE LLC
-        </h1>
+        <Text variant='body' className='text-end text-dark-200'>2023 All rights reserved © MARIKONE LLC</Text>
       </div>
     </div>
   );

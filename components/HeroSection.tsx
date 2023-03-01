@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import Image from "next/image";
+import { Text } from "./Text";
 import { ImageLoader } from "./ImageLoader";
 import { HERO_SECTION_IMAGES } from "../constants";
 import { usePlatform } from "../hooks/usePlatform";
@@ -10,9 +11,7 @@ export const HeroSection = () => {
   return <>
     {!isMobile && <div className="min-h-screen flex justify-start pt-4 md:pb-32 pb-24 flex-col items-center">
       <div className="">
-        <h1 className="text-dark-200 text-2xl italic font-extralight">
-          Fashion Designer
-        </h1>
+        <Text variant='title' className="text-dark-200">Fashion Designer</Text>
       </div>
 
       <div className="md:mt-8 mt-6 flex flex-row">

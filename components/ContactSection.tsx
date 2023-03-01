@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { ContactSectionIcon } from "../icons";
+import { ContactSectionIcon, TickIcon } from "../icons";
 import { StoreInfo } from "./StoreInfo";
 import { TextInput } from "./TextInput";
-import { TickIcon } from "../icons";
+import { Text } from "./Text";
 
 const URL =
   "https://script.google.com/macros/s/AKfycbyWA81iY-k9_UAx78vEvaMEwJEtXcpJuiqr1lh3RmvRHauPZjP7XXpl7ReJPkMT5Ujo1w/exec";
@@ -43,7 +43,7 @@ export const ContactSection = () => {
 
   return (
     <div id='contact-form' className="flex flex-col items-center">
-      <h1 className="text-dark-200 text-2xl italic font-extralight">Contact</h1>
+    <Text variant='title' className='text-dark-200 text-2xl italic font-extralight'>Contact</Text>
 
       <div className="bg-section md:w-1/2 md:min-w-[768px] w-screen rounded-lg mt-8 flex md:flex-row justify-around flex-col-reverse py-12 md:px-14">
         <div className="flex md:border-r basis-[45%] bg-section md:bg-transparent border-dark-100 border-opacity-10 flex-col md:pr-12 md:items-start  mt-24 md:mt-0 md:w-fit">
@@ -80,16 +80,17 @@ export const ContactSection = () => {
             onChange={(e: any) => setMessage(e.target.value)}
             value={message}
           />
+
           <div className="md:self-start self-center w-screen md:w-auto flex flex-col md:block">
             <button
-              className="w-32 h-12 bg-accent-200 rounded m-auto hover:bg-accent-100"
+              className="w-32 h-12 bg-accent-200 rounded md:self-start self-center hover:bg-accent-100"
               onClick={sendEmail}
             >
-              <h1 className="text-dark-200 text-lg">Submit</h1>
+              <Text variant='label' className='text-dark-200'>Submit</Text>
             </button>
             <span id="messege-sent" className="text-sm m-auto md:absolute md:ml-4 hidden">
               <TickIcon/>
-              <p className="ml-6 mt-4 text-sent">Message sent</p>
+              <Text variant="label" className="ml-6 mt-4 text-sent">Message sent</Text>
             </span>
           </div>
         </div>

@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import { Card } from "./Card";
+import { Text } from "./Text";
 
 export const PopularSection = () => {
   return (
-    <div className=" mb-32 flex flex-col items-center">
-      <h1 className="text-dark-200 text-2xl italic font-extralight">Popular</h1>
+    <div className="w-screen mb-32 flex flex-col items-center">
+      <Text variant='title' className="text-dark-200">Popular</Text>
 
       <div className="flex flex-col md:flex-row justify-center">
         <Card
