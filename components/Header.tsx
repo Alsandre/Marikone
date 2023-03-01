@@ -11,10 +11,10 @@ export const Header = () => {
         <Logo />
       </div>
 
-      <div className="flex-initial flex-row flex justify-around w-40 invisible md:visible self-center">
+      <div id='contact-header' className="flex-initial flex-row flex justify-around w-40 invisible md:visible self-center">
         <a href={SOCIAL_LINK.instagram} target='_blank' rel="noreferrer"><InstagramIcon /></a>
         <a href={SOCIAL_LINK.facebook} target='_blank' rel="noreferrer"><FacebookIcon /></a>
-        <EmailIcon />
+        <a href="#contact-form"><EmailIcon /></a>
       </div>
     </div>
   );

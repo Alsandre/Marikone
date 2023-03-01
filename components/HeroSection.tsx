@@ -1,15 +1,20 @@
-import React from "react";
+import React, {useContext} from "react";
 import Image from "next/image";
 import { Text } from "./Text";
+import { ImageLoader } from "./ImageLoader";
+import { HERO_SECTION_IMAGES } from "../constants";
+import { usePlatform } from "../hooks/usePlatform";
+
 
 export const HeroSection = () => {
-  return (
-    <div className="min-h-screen flex justify-start pt-4 md:pb-32 pb-24 flex-col items-center">
+  const isMobile = usePlatform();
+  return <>
+    {!isMobile && <div className="min-h-screen flex justify-start pt-4 md:pb-32 pb-24 flex-col items-center">
       <div className="">
         <Text variant='title' className="text-dark-200">Fashion Designer</Text>
       </div>
 
-      <div className="mt-16 flex flex-row">
+      <div className="md:mt-8 mt-6 flex flex-row">
         <div className="flex-col mx-1">
           <div className=" mb-3">
             <Image
@@ -100,6 +105,8 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div> }
+
+    {isMobile && <ImageLoader title='Fashion Designer' imagePathList={HERO_SECTION_IMAGES} imagePerLoad={3} />}
+  </>
 };

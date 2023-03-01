@@ -1,14 +1,20 @@
 import React from "react";
 import { StyleSectionIcon } from "../icons";
 import Image from "next/image";
+import { ImageLoader } from "./ImageLoader";
+import { TREND_SECTION_IMAGES } from "../constants"; 
+import {usePlatform} from '../hooks/usePlatform';
 import { Text } from "./Text";
 
-export const StyleSection = () => {
-  return (
-    <div className="w-screen mb-32 flex flex-col items-center">
-      <Text variant='title' className='text-dark-200 text-2xl italic font-extralight'>Style</Text>
 
-      <div className="mt-16 flex md:flex-row flex-col md:-mx-2">
+
+export const TrendSection = () => {
+  const isMobile = usePlatform();
+  return (<>
+    {!isMobile && <div className="w-screen mb-32 flex flex-col items-center">
+      <Text variant="title" className="text-dark-200 text-2xl italic font-extralight">Style</Text>
+
+      <div className="md:mt-8 mt-5 flex md:flex-row flex-col md:-mx-2">
         <div className="md:flex-col flex-row mx-2 md:px-0 px-2">
           <div className=" mb-4">
             <Image
@@ -93,6 +99,8 @@ export const StyleSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div>}
+    {isMobile && <ImageLoader title="Style" imagePathList={TREND_SECTION_IMAGES} imagePerLoad={4} />}
+    </>
   );
 };

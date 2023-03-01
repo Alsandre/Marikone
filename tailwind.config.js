@@ -14,6 +14,7 @@ module.exports = {
         "dark-200": "#18181B",
         "accent-100": "#FCDED6",
         "accent-200": "#FFC3B2",
+        sent: "#10B981",
       },
     },
     container: {
