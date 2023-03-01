@@ -5,7 +5,7 @@ export const Card = ({ title, summary, image, className }: Record<string, string
   return (
     <>
       <div className={`flex w-screen ${className}`}>
-        <div className="flex my-10 md:mx-1 mx-20 flex-col items-center">
+        <div className="flex my-10 md:mx-1 mx-auto flex-col items-center">
           <Image
             src={`/assets/${image}.png`}
             width={350}
@@ -14,7 +14,7 @@ export const Card = ({ title, summary, image, className }: Record<string, string
             quality={30}
           />
 
-          <div className=" text-dark-200 mt-4 max-w-[400px]">
+          <div className=" text-dark-200 mt-4 max-w-[350px]">
             <h1 className="font-medium">{title}</h1>
             <h1 className="font-extralight mt-4">{summary}</h1>
           </div>

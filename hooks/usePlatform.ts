@@ -7,4 +7,3 @@ export const usePlatform = function (): boolean {
   }, []);
   return isMobile;
 };
-
