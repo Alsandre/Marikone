@@ -11,10 +11,10 @@ export default function Home() {
   return (
     <Screen>
       <HeroSection />
-      <AboutSection />
-      <PopularSection />
-      <TrendSection />
-      <ContactSection />
+      {/* <AboutSection /> */}
+      {/* <PopularSection /> */}
+      {/* <TrendSection /> */}
+      {/* <ContactSection /> */}
     </Screen>
   );
 }

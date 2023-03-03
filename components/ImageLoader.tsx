@@ -18,7 +18,7 @@ export const ImageLoader = ({title, imagePathList, imagePerLoad}: TImageLoaderPr
     }
     const rengerImagePathList = imagePathList.slice(0, loadCount*imagePerLoad);
   return (
-    <div className="min-h-screen flex justify-start pt-4 md:pb-32 pb-24 flex-col items-center">
+    <div className="min-h-screen mx-5 flex justify-start pt-4 pb-24 flex-col items-center md:pb-32">
       <div className="">
         <h1 className="text-dark-200 text-2xl italic font-extralight">
           {title}
