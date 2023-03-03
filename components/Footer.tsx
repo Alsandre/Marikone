@@ -5,7 +5,7 @@ import { Text } from "./Text";
 
 export const Footer = () => {
   return (
-    <div className="md:mx-36 mx-12 py-4 flex items-center md:justify-around border-t border-dark-100 border-opacity-10 flex-col md:flex-row">
+    <div className="md:mx-36 py-4 flex items-center md:justify-around border-t border-dark-100 border-opacity-10 flex-col md:flex-row">
       <div id='contact-footer' className="flex-initial flex-row flex justify-around w-40 md:hidden self-center mt-[6px] mb-[22px]">
 
         <a href={SOCIAL_LINK.instagram} target='_blank' rel="noreferrer"><InstagramIcon /></a>

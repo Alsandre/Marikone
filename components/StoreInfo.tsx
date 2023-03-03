@@ -9,7 +9,7 @@ export const StoreInfo = ({
 }: Record<string, string>) => {
   return (
     <>
-      <div className="text-body flex flex-col items-start mb-8">
+      <div className="text-body flex flex-col items-start mb-8 w-fit mx-auto min-w-[250px]">
         <Text variant="label" className="mb-2">{title}</Text>
 
         <div className="flex flex-col pt-1">

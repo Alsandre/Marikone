@@ -7,7 +7,7 @@ export const Card = ({ title, summary, image, className }: Record<string, string
     <>
       {/* <div className="flex md:w-1/4 w-screen justify-center">
         <div className="flex my-10 md:mx-4 mx-20 flex-col items-center"> */}
-      <div className={`flex w-screen ${className}`}>
+      <div className={`flex w-full ${className}`}>
         <div className="flex my-10 md:mx-1 mx-auto flex-col items-center">
           <Image
             src={`/assets/${image}.png`}
