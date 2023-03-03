@@ -17,7 +17,7 @@ export const PopularSection = () => {
         />
         
         <Card
-          className='md:w-2/6 mx-[72px]'
+          className='md:w-2/6 md:mx-[72px]'
           title="Leather Corset"
           image="corset-leather"
           summary="Made with high-quality genuine leather, classic Black Leather Corset for all types of outfits."

@@ -10,9 +10,9 @@ import {
 export default function Home() {
   return (
     <Screen>
-      <HeroSection />
+      {/* <HeroSection /> */}
       {/* <AboutSection /> */}
-      {/* <PopularSection /> */}
+      <PopularSection />
       {/* <TrendSection /> */}
       {/* <ContactSection /> */}
     </Screen>
