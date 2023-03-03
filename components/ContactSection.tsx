@@ -3,11 +3,13 @@ import { ContactSectionIcon, TickIcon } from "../icons";
 import { StoreInfo } from "./StoreInfo";
 import { TextInput } from "./TextInput";
 import { Text } from "./Text";
+import { usePlatform } from "../hooks/usePlatform";
 
 const URL =
   "https://script.google.com/macros/s/AKfycbyWA81iY-k9_UAx78vEvaMEwJEtXcpJuiqr1lh3RmvRHauPZjP7XXpl7ReJPkMT5Ujo1w/exec";
 
 export const ContactSection = () => {
+  const isMobile = usePlatform();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -43,10 +45,10 @@ export const ContactSection = () => {
 
   return (
     <div id='contact-form' className="flex flex-col items-center">
-    <Text variant='title' className='text-dark-200 text-2xl italic font-extralight'>Contact</Text>
+    {!isMobile ? <Text variant='title' className='text-dark-200'>Contact</Text> : <Text variant='title' className='text-dark-200'>Stores</Text>}
 
-      <div className="bg-section md:w-1/2 md:min-w-[768px] w-screen rounded-lg mt-8 flex md:flex-row justify-around flex-col-reverse py-12 md:px-14">
-        <div className="flex md:border-r basis-[45%] bg-section md:bg-transparent border-dark-100 border-opacity-10 flex-col md:pr-12 md:items-start  mt-24 md:mt-0 md:w-fit">
+      <div className="md:bg-section md:w-1/2 md:min-w-[768px] w-screen rounded-lg mt-8 flex md:flex-row justify-around flex-col md:py-12 md:px-14">
+        <div className=" bg-section border-dark-100 md:border-r border-opacity-10 flex basis-[45%] flex-col pt-12 pb-4 md:pt-0 md:pr-12 md:items-start md:mt-0 md:w-fit">
           <StoreInfo
             title="Geo Fashion Lab"
             address="80 Zakaria Paliashvili St, Tbilisi"
@@ -60,7 +62,8 @@ export const ContactSection = () => {
           />
         </div>
 
-        <div className="flex basis-[55%] pl-16 flex-col items-center justify-center">
+        {isMobile && <Text variant='title' className='text-dark-200 text-center mt-24 mb-9'>Contact</Text>}
+        <div className="flex basis-[55%] md:pl-16 flex-col items-center justify-center">
           <TextInput
             label="Name"
             className="mb-8"
@@ -81,7 +84,7 @@ export const ContactSection = () => {
             value={message}
           />
 
-          <div className="md:self-start self-center w-screen md:w-auto flex flex-col md:block">
+          <div className="md:self-start self-center w-full md:w-auto flex flex-col md:block">
             <button
               className="w-32 h-12 bg-accent-200 rounded md:self-start self-center hover:bg-accent-100"
               onClick={sendEmail}
