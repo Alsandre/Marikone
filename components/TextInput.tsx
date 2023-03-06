@@ -27,7 +27,7 @@ export const TextInput = ({
     <>
       <div className={className}>
         <div className="ml-4 px-2 absolute -mt-4">
-          <Text variant="body" className="bg-section px-2 text-dark-100">
+          <Text variant="body" className="bg-white md:bg-section px-2 text-dark-100">
             {label}
           </Text>
         </div>
