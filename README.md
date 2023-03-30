@@ -1,20 +1,30 @@
 # MARIKONE.COM
+This project is landing page for fashion designer. On the page clients can browse and filter fashion products and contact the designer via social platforms or Email. 
 
-### Technologies used: 
->Typescript <br>
->Javascript
+## Demo
 
-### Frameworks:
->Next.js<br>
->Tailwind
+_Please, checkout website at the following link: [marikone.com](https://marikone.com)_
 
-### Package manager
->Yarn
+## Built with 
 
-_Please, checkout website at following link: [marikone.com](https://marikone.com)_
+- **Typescript**
+- **Javascript**
+- **Next.js**
+- **Tailwind**
+- **yarn**
+  
+## Optimization
+Page use React.lazy and React.memo to reduce websites load times by almost 50%, resulting in improved user experience and better search engine ranking.
 
-_To run on local server:_
-1. Open **terminal** (<kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>`</kbd> or terminal>new terminal)
-2. Run comand ```yarn```
-3. then ```yarn dev``` 
-4. Page will load on ```localhost:3000```
+## Development
+
+_To run on develpment server type:_
+
+> ```yarn```<br>
+> ```yarn dev```
+
+_by default server starts at 3000 port._
+
+## Production
+
+For the production CI/CD pipeline is setup, using Github Workflows.
